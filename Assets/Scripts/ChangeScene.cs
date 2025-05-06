@@ -11,6 +11,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
     }
 
+    public void Level2()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
+
     public void MainMenu()
     {
         Time.timeScale = 1.0f;
