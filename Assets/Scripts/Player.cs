@@ -171,7 +171,9 @@ public class Player : MonoBehaviour
         HurtNoEffect,
         DeathNoEffect,
         Jump,
-        Fall
+        Fall,
+        IdleNoSword,
+        RunNoSword
     }
 
     private States State
