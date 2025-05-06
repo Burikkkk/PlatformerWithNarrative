@@ -5,7 +5,8 @@ using TMPro;
 
 public class Dialog : MonoBehaviour
 {
-    public TMP_Text text;
+    public TMP_Text text1;
+    public TMP_Text text2;
     public string[] phrases;
 
     private int currentPhrase;
@@ -14,10 +15,13 @@ public class Dialog : MonoBehaviour
     {
         if (currentPhrase >= phrases.Length)
         {
-            text.enabled = false;
+            text1.enabled = false;
+            text2.enabled = false;
             return;
         }
-        text.text = phrases[currentPhrase];
+
+        var currentText = currentPhrase % 2 == 0 ? text1 : text2;
+        currentText.text = phrases[currentPhrase];
         currentPhrase += 1;
     }
 }
