@@ -14,6 +14,7 @@ public class PlayerAttackEvents : MonoBehaviour
     
     public void RestartOnDeath()
     {
-        ChangeScene.Restart();
+        player.Respawn();
+        //ChangeScene.Restart();
     }
 }

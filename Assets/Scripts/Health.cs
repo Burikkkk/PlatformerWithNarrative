@@ -32,6 +32,11 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void ResetHp()
+    {
+        hp = maxHp;
+    }
+    
     private void Die()
     {
         var player = GetComponent<Player>();

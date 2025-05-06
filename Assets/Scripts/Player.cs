@@ -22,7 +22,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float damage = 10f;
     [SerializeField] private GameObject playerSword;
 
-    [SerializeField] private bool hasSword;
+    public bool hasSword { get; set; }
+    public Vector3 startPosition;
     
     private float rayLength = 1.0f;
     private bool speedBoosted = false;
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
         health = GetComponent<Health>();
-     
+        startPosition = transform.position;
     }
 
     private void Update()
@@ -101,7 +102,7 @@ public class Player : MonoBehaviour
             Attack();
     }
 
-    private void ChangeSound(AudioClip clip) {
+    public void ChangeSound(AudioClip clip) {
     
         audio.PlayOneShot(clip);
     }
@@ -207,5 +208,19 @@ public class Player : MonoBehaviour
                 animator.SetInteger("State", (int)value);
         }
   
+    }
+
+    public void SetRestartPosition(Transform pos)
+    {
+        startPosition = pos.position;
+    }
+
+    public void Respawn()
+    {
+        transform.position = startPosition;
+        rb.velocity = new Vector2(0.0f, 0.0f);
+        dead = false;
+        health.ResetHp();
+        State = States.Idle;
     }
 }
