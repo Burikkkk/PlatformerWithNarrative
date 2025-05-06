@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Slider hpSlider;
     [SerializeField] private float damage = 10f;
     [SerializeField] private GameObject playerSword;
+
+    [SerializeField] private bool hasSword;
+    
     private float rayLength = 1.0f;
     private bool speedBoosted = false;
     private bool attacks = false;
@@ -51,7 +54,14 @@ public class Player : MonoBehaviour
         
         if (isGrounded)
         {
-            State = States.Idle;
+            if (hasSword)
+            {
+                State = States.Idle;   
+            }
+            else
+            {
+                State = States.IdleNoSword;
+            }
             if (Input.GetKeyDown(KeyCode.Space))
                 Jump();
         }
@@ -81,8 +91,11 @@ public class Player : MonoBehaviour
             speedBoosted = false;
             speed /= speedBoost;
         }
+
         if (Input.GetButton("Horizontal"))
-            Run();
+        {
+            Run();   
+        }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
             Attack();
@@ -98,7 +111,14 @@ public class Player : MonoBehaviour
     {
         if (CheckGrounded())
         {
-            State = States.Run;
+            if (hasSword)
+            {
+                State = States.Run;   
+            }
+            else
+            {
+                State = States.RunNoSword;
+            }
         }
 
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
