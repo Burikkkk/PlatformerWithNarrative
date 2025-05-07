@@ -816,7 +816,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5038015601946584915, guid: 83d9652edf8102948abc7e6551b4db36, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7214,7 +7215,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2400146368764488574, guid: 78538c3cab4610f4d914a10e71bdf46b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9745,7 +9747,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2213089068918022443, guid: 1509360826d6bb34587310ad4949fdd5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10633,7 +10636,7 @@ PrefabInstance:
     - target: {fileID: 537010753029694482, guid: 29351421889fc464aa4dd6b711caa224, type: 3}
       propertyPath: targetRight
       value: 
-      objectReference: {fileID: 213655530}
+      objectReference: {fileID: 2069558642}
     - target: {fileID: 4084446779298623786, guid: 29351421889fc464aa4dd6b711caa224, type: 3}
       propertyPath: m_LocalScale.x
       value: -3.829161
@@ -10928,11 +10931,11 @@ PrefabInstance:
     - target: {fileID: 537010753029694482, guid: 29351421889fc464aa4dd6b711caa224, type: 3}
       propertyPath: targetLeft
       value: 
-      objectReference: {fileID: 919006715}
+      objectReference: {fileID: 1588635203}
     - target: {fileID: 537010753029694482, guid: 29351421889fc464aa4dd6b711caa224, type: 3}
       propertyPath: targetRight
       value: 
-      objectReference: {fileID: 213655530}
+      objectReference: {fileID: 1993190144}
     - target: {fileID: 4164914526336697440, guid: 29351421889fc464aa4dd6b711caa224, type: 3}
       propertyPath: m_Name
       value: 'Skeleton '
