@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Dialog : MonoBehaviour
 {
     public TMP_Text text1;
     public TMP_Text text2;
+    public UnityEvent onEnd;
     public string[] phrases;
 
     private int currentPhrase;
+    private bool ended = false;
 
     public void NextPhrase()
     {
         
-        if (currentPhrase >= phrases.Length)
+        if (currentPhrase >= phrases.Length && !ended)
         {
+            ended = true;
+            onEnd.Invoke();
             text1.enabled = false;
             text2.enabled = false;
             return;
