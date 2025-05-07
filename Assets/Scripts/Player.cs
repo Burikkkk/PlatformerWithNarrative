@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float damage = 10f;
     [SerializeField] private GameObject playerSword;
 
-    public bool hasSword { get; set; }
+    public bool hasSword;
     public Vector3 startPosition;
     
     private float rayLength = 1.0f;
@@ -219,7 +219,12 @@ public class Player : MonoBehaviour
     {
         transform.position = startPosition;
         rb.velocity = new Vector2(0.0f, 0.0f);
+        hpSlider.gameObject.SetActive(true);
+        speedBoost = 2f;
+        speed = 3.0f;
+        speedBoosted = false;
         dead = false;
+        attacks = false;
         health.ResetHp();
         State = States.Idle;
     }
