@@ -15,6 +15,11 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(2);
     }
+    
+    public void Level3()
+    {
+        SceneManager.LoadSceneAsync(3);
+    }
 
     public void MainMenu()
     {
