@@ -8640,6 +8640,10 @@ PrefabInstance:
       propertyPath: audio
       value: 
       objectReference: {fileID: 661991827}
+    - target: {fileID: 6139735990977998702, guid: 2d59bf087704b024191f6844303842f3, type: 3}
+      propertyPath: hasSword
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3627034682632029075, guid: 2d59bf087704b024191f6844303842f3, type: 3}
     m_RemovedGameObjects: []
