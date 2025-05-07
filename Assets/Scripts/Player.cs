@@ -215,6 +215,11 @@ public class Player : MonoBehaviour
         startPosition = pos.position;
     }
 
+    public void SetHasSword(bool value)
+    {
+        hasSword = value;
+    }
+
     public void Respawn()
     {
         transform.position = startPosition;
