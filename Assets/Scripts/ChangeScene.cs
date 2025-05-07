@@ -8,22 +8,22 @@ public class ChangeScene : MonoBehaviour
     public void Play()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void Level2()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(1);
     }
     
     public void Level3()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(2);
     }
     
     public void Final()
     {
-        SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadSceneAsync(3);
     }
 
     public void MainMenu()
