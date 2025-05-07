@@ -13,6 +13,7 @@ public class Dialog : MonoBehaviour
 
     public void NextPhrase()
     {
+        
         if (currentPhrase >= phrases.Length)
         {
             text1.enabled = false;
@@ -20,7 +21,15 @@ public class Dialog : MonoBehaviour
             return;
         }
 
+        if (phrases[currentPhrase] == "")
+        {
+            currentPhrase++;
+        }
+
         var currentText = currentPhrase % 2 == 0 ? text1 : text2;
+        currentText.enabled = true;
+        var otherText = currentPhrase % 2 == 1 ? text1 : text2;
+        otherText.enabled = false;
         currentText.text = phrases[currentPhrase];
         currentPhrase += 1;
     }
